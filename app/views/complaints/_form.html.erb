@@ -12,6 +12,13 @@
   <% end %>
 
   <div class="actions">
+  <%= form.label :name %>
+    <%= form.text_field :name %>
+    <%= form.label :plot %>
+    <%= form.text_field :plot %>
+    <%= form.label :message %>
+    <%= form.text_field :message %>
+  
     <%= form.submit %>
   </div>
 <% end %>
