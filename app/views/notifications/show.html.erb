@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>maintanances
+<div>
 <%= @notification.title %>
-<%= @notification.description %>
+</div>
+<p><%= @notification.description %></p>
+<p><%=@notification.created_at %></p>
 
 <%= link_to 'Edit', edit_notification_path(@notification) %> |
 <%= link_to 'Back', notifications_path %>
