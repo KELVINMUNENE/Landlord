@@ -12,6 +12,14 @@
   <% end %>
 
   <div class="actions">
+  <%= form.label :name %>
+    <%= form.text_field :name %>
+    <%= form.label :ID_number %>
+    <%= form.text_field :ID_number %>
+    <%= form.label :house_number %>
+    <%= form.text_field :house_number %>
+    <%= form.label :Deposit_amount %>
+    <%= form.text_field :Deposit_amount %>
     <%= form.submit %>
   </div>
 <% end %>
