@@ -69,6 +69,6 @@ class SaccosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sacco_params
-      params.fetch(:sacco, {})
+      params.fetch(:sacco).permit(:name, :Id ,:House, :currency, :created_at)
     end
 end

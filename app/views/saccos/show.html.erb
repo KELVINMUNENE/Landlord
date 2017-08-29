@@ -1,4 +1,27 @@
 <p id="notice"><%= notice %></p>
+<div>
+<%= @sacco.name %>
+</div>
+<p><%= @sacco.Id %></p>
+<p><%= @sacco.House %></p>
+<p><%=@sacco.created_at %></p>
+<h3>Choose payment method</h3>
+<p><%= link_to "Mpesa" %></p>
+<p><%= link_to "Paypal" %></p>
+
 
 <%= link_to 'Edit', edit_sacco_path(@sacco) %> |
 <%= link_to 'Back', saccos_path %>
+
+
+
+
+
+
+
+
+
+
+
+
+
