@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :emergencies
   resources :notifications
   resources :maintanances
   resources :complaints
