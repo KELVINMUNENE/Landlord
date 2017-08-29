@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 <%= @maintanance.name %>
-<%= @maintanance.area %>
-<%= @maintanance.problem %>
-<%= @maintanance.created_at %>
+<p><%= @maintanance.area %></p>
+<p><%= @maintanance.problem %></p>
+<p><%= @maintanance.created_at %></p>
 
 <%= link_to 'Edit', edit_maintanance_path(@maintanance) %> |
 <%= link_to 'Back', maintanances_path %>

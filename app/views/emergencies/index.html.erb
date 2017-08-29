@@ -12,9 +12,11 @@
   <tbody>
     <% @emergencies.each do |emergency| %>
       <tr>
-        <td><%= link_to 'Show', emergency %></td>
+        <p> <%= link_to emergency.title, emergency %></p>
+        <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_emergency_path(emergency) %></td>
         <td><%= link_to 'Destroy', emergency, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         <%end %>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Emergency', new_emergency_path %>
+

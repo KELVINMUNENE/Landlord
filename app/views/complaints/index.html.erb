@@ -12,16 +12,22 @@
   <tbody>
     <% @complaints.each do |complaint| %>
       <tr>
-      <h1><%= complaint.message %></h1>
-        <td><%= link_to 'Show', complaint %></td>
+     <p> <%= link_to complaint.message, complaint %></p>
+      
+        <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_complaint_path(complaint) %></td>
         <td><%= link_to 'Destroy', complaint, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<%if user_signed_in?%>
 <%= link_to 'New Complaint', new_complaint_path %>
+<%end%>
+
+
+
 
