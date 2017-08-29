@@ -69,6 +69,6 @@ class MaintanancesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def maintanance_params
-      params.fetch(:maintanance, {})
+      params.fetch(:maintanance).permit(:name, :area, :problem, :timestamp)
     end
 end

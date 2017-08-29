@@ -2,7 +2,7 @@
 <%= @complaint.name %>
 <%= @complaint.plot %>
 <%= @complaint.message %>
-<%= @complain.timestamp %>
+<%= @complaint.created_at %>
 
 <%= link_to 'Edit', edit_complaint_path(@complaint) %> |
 <%= link_to 'Back', complaints_path %>
