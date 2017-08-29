@@ -1,0 +1,17 @@
+<%= form_with(model: sacco, local: true) do |form| %>
+  <% if sacco.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sacco.errors.count, "error") %> prohibited this sacco from being saved:</h2>
+
+      <ul>
+      <% sacco.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
