@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
-<%= complaints.name %>
-<%= complaints.plot %>
-<%= complaints.message %>
+<%= @complaint.name %>
+<%= @complaint.plot %>
+<%= @complaint.message %>
 
 <%= link_to 'Edit', edit_complaint_path(@complaint) %> |
 <%= link_to 'Back', complaints_path %>
