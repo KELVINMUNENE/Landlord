@@ -50,11 +50,27 @@
         </div>
       </div>
     </nav>
-    
+    <% if notice %>
+    <div id="notice_wrapper">
   <p class="notice"><%= notice %></p>
+  </div>
+  <% elsif alert %>
+  <div id="notice_wrapper">
    <p class="alert"><%= alert %></p>
+   </div>
+    <% end %>
     <%= yield %>
+   
        </body>
+       <script>
+       $(document).ready(function(){
+        setTimeout(function(){
+          $('.notice').fadeOut("slow",function(){
+            $(this).remove();
+          })
+        }, 4500);
+       });
+       </script>
 
 </html>
 
