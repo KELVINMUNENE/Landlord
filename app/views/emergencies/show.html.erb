@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
+<%= @emergency.title %>
+</div>
+<p><%= @emergency.description %></p>
+<p><%=@emergency.created_at %></p>
 
 <%= link_to 'Edit', edit_emergency_path(@emergency) %> |
 <%= link_to 'Back', emergencies_path %>
