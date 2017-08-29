@@ -12,7 +12,7 @@
   <tbody>
     <% @complaints.each do |complaint| %>
       <tr>
-      <h1><%= complaint.name %></h1>
+      <h1><%= complaint.message %></h1>
         <td><%= link_to 'Show', complaint %></td>
         <td><%= link_to 'Edit', edit_complaint_path(complaint) %></td>
         <td><%= link_to 'Destroy', complaint, method: :delete, data: { confirm: 'Are you sure?' } %></td>
