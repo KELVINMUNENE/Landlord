@@ -69,6 +69,6 @@ class EmergenciesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def emergency_params
-      params.fetch(:emergency, {})
+      params.fetch(:emergency).permit(:title, :description, :created_at)
     end
 end
