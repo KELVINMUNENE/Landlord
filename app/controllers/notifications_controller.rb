@@ -69,6 +69,7 @@ class NotificationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def notification_params
-      params.fetch(:notification, {})
+      params.fetch(:notification).permit(:title, :description, :created_at)
     end
 end
+
