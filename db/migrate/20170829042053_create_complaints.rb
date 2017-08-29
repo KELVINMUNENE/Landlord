@@ -5,7 +5,7 @@ class CreateComplaints < ActiveRecord::Migration[5.1]
     	t.column :plot, :string
     	t.column :message, :string
 
-    	t.timestamp
+     t.timestamps
     end
   end
 end
