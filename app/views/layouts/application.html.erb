@@ -20,17 +20,23 @@
   </head>
 
   <body>
-  <nav>
-    <div class="nav-wrapper" id="navnav">
-     
+<nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          
+          <a class="navbar-brand" href="index.php">Faiba Houseware</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="getting-started.php">Example</a></li>
+           
 
-      
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%= link_to "<i class='material-icons'>home</i>".html_safe, root_path%></li>
-        
-      
 
-        <% if user_signed_in?%>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home", root_path%></li>
+              <li><a href="#">Example</a></li>
+               <% if user_signed_in?%>
 
         <li> <%= link_to "logout", destroy_user_session_path, method: :delete%></li>
         <li><%= link_to "edit", edit_user_registration_path %></li>
@@ -39,10 +45,12 @@
         <li> <%= link_to "signup", new_user_registration_path %></li>
 
         <%end%>
-
-      </ul>
-    </div>
-  </nav>
+       
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
   <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
     <%= yield %>
