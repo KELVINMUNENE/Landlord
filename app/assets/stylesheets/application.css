@@ -1,4 +1,7 @@
-*= require toastr
+
+
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 .notice_wrapper {

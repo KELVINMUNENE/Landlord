@@ -13,7 +13,8 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
 // toggle class scroll 
-	
-//= require toastr
+//= require bootstrap-sprockets
+
 
