@@ -257,3 +257,9 @@ ol, ul {
   margin-right: 0;
 }
 /* images end */
+.mpesa{
+  color:green;
+}
+.rent{
+  font-weight: 700;
+}
