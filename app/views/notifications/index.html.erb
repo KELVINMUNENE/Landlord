@@ -12,7 +12,8 @@
   <tbody>
     <% @notifications.each do |notification| %>
       <tr>
-        <td><%= link_to 'Show', notification %></td>
+      
+     <p> <%= link_to notification.title, notification %></p>
         <td><%= link_to 'Edit', edit_notification_path(notification) %></td>
         <td><%= link_to 'Destroy', notification, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
