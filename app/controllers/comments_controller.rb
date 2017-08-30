@@ -8,22 +8,22 @@ class CommentsController < ApplicationController
 		@comment = Comment.new(comment_params)
 		if @comment.save
 			flash[:notice] = "comment saved successfully"
-			redirect_to post_path(params[:post_id])
+			redirect_to notification_path(params[:notification_id])
 		else
 			flash[:notice] = "comment not saved"
-			redirect_to post_path(params[:post_id])
+			redirect_to notification_path(params[:notification_id])
 		end
 		
 	end
 	private
 	def comment_params
 		user = {user_id:@user.id}
-		post = {post_id:params[:post_id]}
-		params.require(:comment).permit(:description, :post_id).merge(user).merge(post)
+		notification = {notification_id:params[:notiffication_id]}
+		params.require(:comment).permit(:description, :notification_id).merge(user).merge(notification)
 
 	end
 	def get_user
 		@user = current_user
-		@post = Post.find(params[:post_id])
+		@notification = Notification.find(params[:notification_id])
 	end
 end

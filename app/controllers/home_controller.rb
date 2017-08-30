@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   	@emergencies = Emergency.all
   	@maintanances = Maintanance.all
   	@saccos =Sacco.all
-  	@notification =Notification.all
+  	@notifications =Notification.all
+  	@comments =Comment.all
   end
 end

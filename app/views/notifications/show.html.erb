@@ -4,6 +4,7 @@
 </div>
 <p><%= @notification.description %></p>
 <p><%=@notification.created_at %></p>
-
+ 
+<%= link_to 'New comment', new_notification_comment_path(@notification)%> |
 <%= link_to 'Edit', edit_notification_path(@notification) %> |
 <%= link_to 'Back', notifications_path %>
