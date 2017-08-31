@@ -1,7 +1,4 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Saccos</h1>
-
 <table>
   <thead>
     <tr>
@@ -117,14 +114,16 @@
 </div>
 
 
-
+<%if user_signed_in?%>
         <td><%= link_to 'Edit', edit_sacco_path(sacco) %></td>
         <td><%= link_to 'Destroy', sacco, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<%if user_signed_in?%>
 <%= link_to 'New Sacco', new_sacco_path %>
+<% end %>

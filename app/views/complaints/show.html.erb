@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
-<%= @complaint.name %>
-<%= @complaint.plot %>
-<%= @complaint.message %>
-<%= @complaint.created_at %>
+<div class="complaints">
+<h1><%= @complaint.plot %></h1>
+</div>
+<p><%= @complaint.message %></p>
+<p><%= @complaint.name %></p>
+<p><%= @complaint.created_at %></p>
 
 <%= link_to 'Edit', edit_complaint_path(@complaint) %> |
 <%= link_to 'Back', complaints_path %>
