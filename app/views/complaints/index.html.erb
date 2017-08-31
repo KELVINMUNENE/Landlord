@@ -12,7 +12,7 @@
   <tbody>
     <% @complaints.each do |complaint| %>
       <tr>
-     <p> <%= link_to complaint.message, complaint %></p>
+     <p> <%= link_to complaint.plot, complaint %></p>
       
         <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_complaint_path(complaint) %></td>
